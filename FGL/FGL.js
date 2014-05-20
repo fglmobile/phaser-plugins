@@ -8,7 +8,7 @@
  
  
  //PLUGIN SETUP
-Phaser.Plugin.FGL = function (game, parent) {
+Phaser.Plugin.FGL = function (parent) {
   Phaser.Plugin.call(this, game, parent);
   
   if(('__fgl' in window) == false) {
