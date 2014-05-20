@@ -1,9 +1,9 @@
 /**
  * FGL.js
  *
- * FGL HTML5 SDK plugin for use with phaser.io
+ * FGL HTML5 SDK plugin for use with Phaser
  *
- * Provides bindings for the FGL HTML5 SDK
+ * Provides bindings and helper functions for using FGL SDK features.
  */
  
  
@@ -16,8 +16,11 @@ Phaser.Plugin.FGL = function (game, parent) {
     throw new Error('You need to include the FGL SDK in your project, add the following script tag to your HTML file:\n<script src="https://sites.mpstatic.com/html5/sdks/1.4.2/fgl.js"></script>');
   }
   
+  // TODO: Is there a better way to do this?
+  // This works, but doesn't seem watertight.
   game.fgl = this;
   
+  // Auto-load branding:
   if(window.__fgl['brandingEnabled']){
     var loader = new Phaser.Loader(game)
     loader.image('fgl-branding-image', window.__fgl['getBrandingLogo']());
