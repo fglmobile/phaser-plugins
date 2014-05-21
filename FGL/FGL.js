@@ -18,10 +18,6 @@ Phaser.Plugin.FGL = function (game, parent) {
     throw new Error('You need to include the FGL SDK in your project, add the following script tag to your HTML file:\n<script src="https://sites.mpstatic.com/html5/sdks/1.4.2/fgl.js"></script>');
   }
   
-  // TODO: We could remove this and instruct users to use window.fgl instead of this.game.fgl
-  // But does this.game.fgl feel more 'phaser'-like?
-  game.fgl = window['fgl'];
-  
   // Auto-load branding:
   if(window.fgl['brandingEnabled']){
     var loader = new Phaser.Loader(game);
